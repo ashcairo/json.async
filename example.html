@@ -1,0 +1,31 @@
+<html>
+    <head>
+		<title>json.worker.js Example</title>
+    </head>
+
+    <body bgcolor="#000000" class="nomargin body" style="overflow: hidden;">
+
+        <script type="text/javascript" src="json.async.js"></script>
+        <script>
+            function parseJsonButtonPressed()
+            {
+                var startTime = new Date().getTime();
+                var jsonString = document.getElementById( "jsonArea" ).value;
+                JSON.parseAsync( jsonString, function(json)
+                {
+                    var currentTime = new Date().getTime();
+                    var time = currentTime - startTime;
+                    alert( "Parsing this json took: " + time + "ms\n" + json );
+                });
+            }
+        </script>
+
+		<table class="nomargin" width="100%" height="100%">
+			<tbody><tr><td valign="middle">
+                <textarea id="jsonArea" rows="50" cols="50">{ "data": "Replace this json with a bigger file" }</textarea>
+                <button type="button" onclick="parseJsonButtonPressed()">Parse JSON</button>
+			</td></tr></tbody>
+		</table>
+
+    </body>
+</html>
