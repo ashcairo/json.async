@@ -22,7 +22,7 @@ JSON.parseAsync( '{ "data":"some data" }, function (json)
 
 Performance
 ===========
-I've included a sample big json file, which takes my MacBook Air 2011 i7 1.8seconds to parse in Chrome. Previously the parsing of this file would halt the main thread and cause the 3d rendering of the view to lag. Now it runs soom.
+I've included a sample big json file, which takes my MacBook Air 2011 i7 1.8seconds to parse in Chrome. Previously the parsing of this file would halt the main thread and cause the 3d rendering of the view to lag. Now it runs smoothly.
 
 Projects that use this library
 ==============================
