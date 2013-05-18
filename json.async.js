@@ -1,11 +1,11 @@
 JSON.parseAsync = function(data, callback)
-{
+{var worker, json
 	if( window.Worker )
 	{
-		var worker = new Worker( 'json.worker.js' );
+		worker = new Worker( 'json.worker.js' );
 		worker.addEventListener( 'message', function (e)
 		{
-			var json = e.data;
+			json = e.data;
 			callback( json );
 		}, false);
 		worker.postMessage( data );
@@ -13,7 +13,7 @@ JSON.parseAsync = function(data, callback)
 	}
 	else
 	{
-		var json = JSON.parse( data );
+		json = JSON.parse( data );
 		callback( json );
 	}
 };
