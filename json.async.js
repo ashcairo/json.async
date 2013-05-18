@@ -1,6 +1,6 @@
 JSON.parseAsync = function(data, callback)
 {
-	if( this.Worker )
+	if( window.Worker )
 	{
 		var worker = new Worker( 'json.worker.js' );
 		worker.addEventListener( 'message', function (e)
