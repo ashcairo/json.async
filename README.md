@@ -36,4 +36,4 @@ http://www.youtube.com/watch?v=66i30ogH_x0&feature=youtu.be
 
 Projects that use this library
 ==============================
-http://multiplay.io - Realtime 3D multiplayer games editor
+http://playir.com - Real-time 3D multiplayer games and apps maker.
